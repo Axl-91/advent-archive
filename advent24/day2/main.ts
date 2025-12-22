@@ -9,20 +9,16 @@ function isDiffValid(max: number, min: number) {
   return max - min >= 1 && max - min <= 3;
 }
 
-function main() {
+function part1(inputLines: string[]) {
   let result = 0;
-  let filePath = path.join(__dirname, "input");
-  let inputStr = readFileSync(filePath, "utf-8");
-  const lines = inputStr.trim().split("\n");
 
-  for (const line of lines) {
+  for (const line of inputLines) {
     let numbers = line.split(" ").map(Number);
 
     let isAsc = numbers.every(
       (num, i, arr) =>
         i === 0 || (num > arr[i - 1]! && isDiffValid(num, arr[i - 1]!)),
     );
-
     let isDesc = numbers.every(
       (num, i, arr) =>
         i === 0 || (num < arr[i - 1]! && isDiffValid(arr[i - 1]!, num)),
@@ -30,7 +26,26 @@ function main() {
 
     if (isAsc || isDesc) result++;
   }
-  console.log(result);
+
+  console.log(`Part 1 Result: ${result}`);
+}
+
+// function part2(inputLines: string[]) {
+//   let result = 0;
+
+//   for (const line of inputLines) {
+//     console.log(line);
+//   }
+
+//   console.log(`Part 2 Result: ${result}`);
+// }
+
+function main() {
+  let filePath = path.join(__dirname, "input");
+  let inputStr = readFileSync(filePath, "utf-8");
+  const inputLines = inputStr.trim().split("\n");
+
+  part1(inputLines);
 
   return 0;
 }
