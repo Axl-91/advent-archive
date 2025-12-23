@@ -12,9 +12,16 @@ public class Main {
             Pattern pattern = Pattern.compile("mul\\((\\d+),(\\d+)\\)");
             Matcher matcher = pattern.matcher(input);
 
+            int total = 0;
+
             while (matcher.find()) {
-                System.out.println("Regex match: " + matcher.group());
+                int firstValue = Integer.parseInt(matcher.group(1));
+                int secondValue = Integer.parseInt(matcher.group(2));
+
+                total += firstValue * secondValue;
             }
+            System.out.println("Part 1 Result: " + total);
+
         } catch (IOException e) {
             System.err.println("Error reading file: " + e.getMessage());
         }
