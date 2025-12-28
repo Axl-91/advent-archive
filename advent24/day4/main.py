@@ -21,10 +21,29 @@ def countXmas(lines, i, j):
     return xmasFound
 
 
+def countCrossMas(lines, i, j):
+    if i + 2 >= len(lines) or j + 2 >= len(lines[i]):
+        return 0
+
+    if lines[i][j] == "M" and lines[i + 1][j + 1] == "A" and lines[i + 2][j + 2] == "S":
+        if lines[i + 2][j] == "S" and lines[i][j + 2] == "M":
+            return 1
+        if lines[i + 2][j] == "M" and lines[i][j + 2] == "S":
+            return 1
+
+    if lines[i][j] == "S" and lines[i + 1][j + 1] == "A" and lines[i + 2][j + 2] == "M":
+        if lines[i + 2][j] == "S" and lines[i][j + 2] == "M":
+            return 1
+        if lines[i + 2][j] == "M" and lines[i][j + 2] == "S":
+            return 1
+
+    return 0
+
+
 def part1(lines):
     total = 0
-
     len_line = len(lines[0])
+
     for i in range(len(lines)):
         for j in range(len_line):
             if lines[i][j] == "X":
@@ -35,6 +54,11 @@ def part1(lines):
 
 def part2(lines):
     total = 0
+    len_line = len(lines[0])
+
+    for i in range(len(lines)):
+        for j in range(len_line):
+            total += countCrossMas(lines, i, j)
 
     print("Part 2 Total:", total)
 
