@@ -21,12 +21,8 @@ def countXmas(lines, i, j):
     return xmasFound
 
 
-def main():
+def part1(lines):
     total = 0
-    lines = []
-    with open("input", "r") as inputFile:
-        for line in inputFile:
-            lines.append(line.strip())
 
     len_line = len(lines[0])
     for i in range(len(lines)):
@@ -34,7 +30,25 @@ def main():
             if lines[i][j] == "X":
                 total += countXmas(lines, i, j)
 
-    print(total)
+    print("Part 1 Total:", total)
+
+
+def part2(lines):
+    total = 0
+
+    print("Part 2 Total:", total)
+
+
+def main():
+    lines = []
+
+    with open("input", "r") as inputFile:
+        for line in inputFile:
+            lines.append(line.strip())
+
+    part1(lines)
+    part2(lines)
+
     return 0
 
 
