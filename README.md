@@ -7,5 +7,5 @@ Repository for old _**Advent of Code**_ solutions
 - [x] Day 1 (Part I/II)
 - [x] Day 2 (Part I/II)
 - [x] Day 3 (Part I/II)
-- [x] Day 4 (Part I)
+- [x] Day 4 (Part I/II)
 - [ ] Day 5
