@@ -9,3 +9,7 @@ Repository for old _**Advent of Code**_ solutions
 - [x] Day 3 (Part I/II)
 - [x] Day 4 (Part I/II)
 - [x] Day 5 (Part I)
+- [ ] Day 6
+- [ ] Day 7
+- [ ] Day 9
+- [ ] Day 10
