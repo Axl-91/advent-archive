@@ -8,7 +8,7 @@ Repository for old _**Advent of Code**_ solutions
 - [x] Day 2 (Part I/II)
 - [x] Day 3 (Part I/II)
 - [x] Day 4 (Part I/II)
-- [x] Day 5 (Part I)
+- [x] Day 5 (Part I/II)
 - [ ] Day 6
 - [ ] Day 7
 - [ ] Day 9
